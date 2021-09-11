@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
     }
+    /*
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -110,7 +111,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    */
     private Distance dist;
+
     private Weight weight;
     private Temperature temp;
 
@@ -124,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
     private CheckBox formBox;
     private ImageView imgView;
 
+    /*
     protected double convertUnit(String x , String y , String z , double a){
         if(x.equalsIgnoreCase("Temperature")){
             if(y.equalsIgnoreCase("C")){
@@ -249,7 +253,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
+    */
 
 
 }

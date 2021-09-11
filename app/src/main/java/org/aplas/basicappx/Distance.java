@@ -102,7 +102,7 @@ public class Distance {
         Temperature tmp = new Temperature();
         tmp.setCelcius(100);
         tmp.convert("C" , "F" , tmp.getCelcius());
-        System.out.println(tmp.getFahreinheit());
+        System.out.println(tmp.getFahrenheit());
 
     }
 }

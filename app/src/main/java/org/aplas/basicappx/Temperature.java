@@ -16,61 +16,71 @@ public class Temperature {
     public void setFahrenheit(double value){
         fahreinheit = value;
     }
-    public void setKelvin(double value){
-        kelvin = value = value;
+    public void setKelvins(double value){
+        kelvin = value ;
     }
     public double getCelcius(){
         return celcius;
     }
-    public double getFahreinheit(){
+    public double getFahrenheit(){
         return fahreinheit;
     }
-    public double getKelvin(){
+    public double getKelvins(){
         return kelvin;
     }
 
-    public void convert(String oriUnit , String convUnit , double value){
-        if(oriUnit.equalsIgnoreCase("C")){
+    public double convert(String oriUnit , String convUnit , double value){
+        double valueA = 0;
+        if(oriUnit.equalsIgnoreCase("°C")){
             switch ( convUnit){
-                case "F":
-                    fahreinheit = (value * 9/5) + 32;
+                case "°F":
+                    valueA = fahreinheit = (value * 9/5) + 32;
+
                     break;
                 case "K":
-                    kelvin = value - 273.15;
+                    valueA = kelvin = value - 273.15;
+
                     break;
                 default:
             }
+            return valueA;
         }
-        if(oriUnit.equalsIgnoreCase("F")){
+        if(oriUnit.equalsIgnoreCase("°F")){
             switch (convUnit){
-                case "C":
-                    fahreinheit = (value - 32) * 5/9;
+                case "°C":
+                    valueA = fahreinheit = (value - 32) * 5/9;
+
                     break;
                 case "K":
-                    kelvin = (value - 32) * 5/9 + 273.15;
+                    valueA = kelvin = (value - 32) * 5/9 + 273.15;
+
                     break;
                 default:
             }
+            return  valueA;
         }
         if(oriUnit.equalsIgnoreCase("K")){
             switch (convUnit){
-                case "C":
-                    fahreinheit = value - 273.15;
+                case "°C":
+                    valueA = fahreinheit = value - 273.15;
+
                     break;
-                case "F":
-                    kelvin = (value - 273.15) * 9/5 + 32;
+                case "°F":
+                    valueA = kelvin = (value - 273.15) * 9/5 + 32;
+
                     break;
                 default:
 
             }
+            return  valueA;
         }
+        return valueA;
     }
 
     public static void main(String[] args) {
         Temperature tmp = new Temperature();
         tmp.setCelcius(100);
-        tmp.convert("C" , "F" , tmp.getCelcius());
-        System.out.println(tmp.getFahreinheit());
+        System.out.println(tmp.convert("°C" , "°F" , tmp.getCelcius()));
 
     }
 

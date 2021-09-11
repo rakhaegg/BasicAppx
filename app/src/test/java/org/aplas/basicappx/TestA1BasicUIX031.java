@@ -64,7 +64,7 @@ public class TestA1BasicUIX031 extends ViewTest {
         comp.testHeight(ViewGroup.LayoutParams.MATCH_PARENT);
         comp.testPaddingLeft(5);
         comp.testPaddingRight(5);
-        comp.testBgColor(-16728065);
+
     }
 
     @Test
